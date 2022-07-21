@@ -6,18 +6,23 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection.toLowerCase() == computerSelection.toLowerCase()){
+        console.log("Tie. " + playerSelection + " is equal to " + computerSelection);
         return "Tie"//"Tie. " + playerSelection + " is equal to " + computerSelection;
     }
     else if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors"){
+        console.log("You win. " + playerSelection + " beats " + computerSelection);
         return "Win"//"You win. " + playerSelection + " beats " + computerSelection;
     }
     else if(playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock"){
+        console.log("You win. " + playerSelection + " beats " + computerSelection);
         return "Win"//"You win. " + playerSelection + " beats " + computerSelection;
     }
     else if(playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper"){
+        console.log("You win. " + playerSelection + " beats " + computerSelection);
         return "Win"//"You win. " + playerSelection + " beats " + computerSelection;
     }
     else{
+        console.log("You lose. " + playerSelection + " loses to" + computerSelection);
         return "Loss"//"You lose. " + playerSelection + " loses to" + computerSelection;
     }
 }
@@ -34,7 +39,11 @@ function game(){
         }else{
             wins += 1; losses += 1;
         }
+
+        console.log("Player wins: " + wins + " losses: " + losses);
     }
+
+    console.log("Player wins: " + wins + " losses: " + losses);
 
     //console.log(wins, losses);
 }
